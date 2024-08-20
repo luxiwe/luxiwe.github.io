@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 利用HEXO与Github搭建博客 -  Hexo</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
+
+		
+<script src="/lib/mdui/mdui.min.js"></script>
+
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://kira.host/assets/Pictures/Others/116359b4ccf19917.jpg"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://kira.host/assets/Pictures/Others/-f0d5cc34c6e5aa7_compressed.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://kira.host/assets/Pictures/Others/20220922230447.jpg" title="John Doe">
+			<img
+				src="https://kira.host/assets/Pictures/Others/20220922230447.jpg"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>3</div>
+		<div><span>标签</span>1</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1132786821&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/<康纳屠城>"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/<luxiwe>/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			Archive
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">3</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2024
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://kira.host/assets/Pictures/Others/-f0d5cc34c6e5aa7_compressed.jpg"
+				data-sizes="auto"
+				alt="利用HEXO与Github搭建博客"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>利用HEXO与Github搭建博客</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2024年08月20日</a>
+			<a><i class="kirafont icon-edit-fill"></i>878 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
+		</div>
+		<h3><span id="一本方法搭建博客的优势">一：本方法搭建博客的优势</span></h3><ol>
+<li>不需要服务器和域名，而是选择部署在Github上，没有成本</li>
+<li>不需要学习前端框架也可以有好看的页面，Hexo拥有数量不少的开源主题，比如<a target="_blank" rel="noopener" href="https://crazywong.com/">CrazyWong</a>、<a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT</a>等</li>
+</ol>
+<h3><span id="二本文需要的工具">二：本文需要的工具</span></h3><ul>
+<li>Nodejs</li>
+<li>Hexo</li>
+<li>Git</li>
+<li>Vscode（任意编辑器都可）</li>
+</ul>
+<h3><span id="三工具的安装">三：工具的安装</span></h3><h4><span id="nodejs的安装与配置">Nodejs的安装与配置</span></h4><p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">点击此处进入官网下载Nodejs</a></p>
+<p>​	进入官网后，我们可以看到下图的画面，一般我们选择下载长期支持版，如果版本有所不同也没关系，不同的版本不影响我们接下来博客的搭建，因此建议下载最新的长期支持版本。</p>
+<img data-fancybox="gallery" data-sizes="auto" data-src="/.io//Users\11327\AppData\Roaming\Typora\typora-user-images\image-20240820143258228.png" alt="image-20240820143258228" class="lazyload">
+
+<p>​	Nodejs的安装就是傻瓜式安装，只需一路继续下去即可，需要注意的地方有：选择安装路径</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/880814678133e0c4cdcc124296322f9b.png" alt="img" class="lazyload"></p>
+<p>​	注意：不需要勾选此选项，直接Next即可</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/e36fb97768a608fa8eaf38cf14decbe2.png" alt="img" class="lazyload"></p>
+<p>​	安装成功点击Finish即可</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/c0b6b12ba913d55de1a4c429e7714899.png" alt="img" class="lazyload"></p>
+<h4><span id="环境测试">环境测试</span></h4><p>​	（1）搜索栏搜索cmd找到 <strong>命令提示符</strong>，然后打开</p>
+<img data-fancybox="gallery" data-sizes="auto" data-src="/.io//Users\11327\AppData\Roaming\Typora\typora-user-images\image-20240820144344811.png" alt="image-20240820144344811" class="lazyload">
+
+<p>​	（2）输入下面的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">node -v<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">npm -v<br></code></pre></td></tr></table></figure>
+
+<p>​		若正常出现版本号，代表安装成功</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/.io//Users\11327\AppData\Roaming\Typora\typora-user-images\image-20240820144745221.png" alt="image-20240820144745221" class="lazyload"></p>
+<h4><span id="git的安装">Git的安装</span></h4><h5><span id="git的概述">Git的概述</span></h5><p>​	<strong>Git</strong>是一款免费、开源的<strong>分布式版本控制系统</strong>，用于敏捷高效地处理任何或小或大的项目。</p>
+<h5><span id="本文中git的作用">本文中Git的作用</span></h5><p>​	我们需要使用Git将我们的博客发布到Github上面</p>
+<h5><span id="git的下载-git官网下载">Git的下载 ： </span></h5><p>​	Git的较为简单的部分就不过多介绍了，主要介绍需要调整的地方</p>
+<p>​	根据下图作为参考，选择相应的组件</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/a2d856701d68f95fd591e45e04546ecc.png" alt="img" class="lazyload"></p>
+<h5><span id="选择-git-默认编辑器">选择 Git 默认编辑器</span></h5><p>Git 安装程序里面内置了 10 种编辑器供你挑选，比如 Atom、Notepad、Notepad++、Sublime Text、Visual Studio Code、Vim 等等，默认的是 Vim ，选择 Vim 后可以直接进行到下一步，但是 Vim 是纯命令行，操作有点难度，需要学习。如果选其他编辑器，则还需要去其官网安装后才能进行下一步。</p>
+<p><strong>这里呢我建议选择vscode，因为vscode有更好的ui界面以及丰富的组件和代码其实功能，使用起来更加方便</strong></p>
+<p>因此下图应当选择为vscode</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/889b90f0374b706e232bf2b71617304e.png" alt="在这里插入图片描述" class="lazyload"></p>
+<p><em><strong>当安装完毕后，可以git bash中输入下面的代码来启动vscode</strong></em></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">code 文件名.后缀  *//在 git bash 调用 vscode 打开文件*</span> <br></code></pre></td></tr></table></figure>
+
+<h5><span id="335-决定初始化新项目仓库的主干名字">3.3.5 决定初始化新项目(仓库)的主干名字</span></h5><p>第一种是让 Git 自己选择，名字是 <code>master</code> ，但是未来也有可能会改为其他名字；第二种是我们自行决定，默认是 <code>main</code>，当然，你也可以改为其他的名字。一般默认第一种。<!--这里不必太过深究，实际使用时可以通过查看github中的仓库来修改仓库名。--></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/58c69fd831300cfdc93a0987c3ac3d40.png" alt="img" class="lazyload"></p>
+<h5><span id="336-调整你的-path-环境变量选择recommended即可">3.3.6 调整你的 path 环境变量：选择Recommended即可</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/655a28b98d1e7fe85a3373dcd43d5fde.png" alt="img" class="lazyload"></p>
+<h5><span id="337-选择-ssh-执行文件">3.3.7 选择 SSH 执行文件</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="/.io//Users\11327\AppData\Roaming\Typora\typora-user-images\image-20240820173840178.png" alt="image-20240820173840178" class="lazyload"></p>
+<h5><span id="338-选择https后端传输普通用户选择第一项即可">3.3.8 选择HTTPS后端传输：普通用户选择第一项即可</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/d519858c7f9c0f958fd0b672a89e7ff7.png" alt="img" class="lazyload"></p>
+<h5><span id="339-配置行尾符号转换">3.3.9 配置行尾符号转换</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/d519858c7f9c0f958fd0b672a89e7ff7.png" alt="img" class="lazyload"></p>
+<h5><span id="3310-配置终端模拟器以与-git-bash-一起使用">3.3.10 配置终端模拟器以与 Git Bash 一起使用</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/7906af0e0d0104617fa8830d613328e3.png" alt="img" class="lazyload"></p>
+<h5><span id="3311-选择默认的-git-pull-行为">3.3.11 选择默认的 “git pull” 行为</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/8a0d2df5e75219be25bdae0754dcf486.png" alt="img" class="lazyload"></p>
+<h5><span id="3312-选择一个凭证帮助程序">3.3.12 选择一个凭证帮助程序</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/40b9cff7dc4de038c113335a2919f7cb.png" alt="img" class="lazyload"></p>
+<h5><span id="3313-配置额外的选项">3.3.13 配置额外的选项</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/ecc953d7e4ed9fc7903c6368baadab6e.png" alt="img" class="lazyload"></p>
+<h5><span id="3314-这里建议都不勾选直接点击install进行安装即可">3.3.14 这里建议都不勾选，直接点击Install进行安装即可</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://i-blog.csdnimg.cn/blog_migrate/182ea448ca8fdd81d341aa34b6e1f512.png" alt="img" class="lazyload"></p>
+<h5><span id="3315-安装结束后我们搜索git应该出现下面几个选项">3.3.15 安装结束后我们搜索git应该出现下面几个选项</span></h5><p><img data-fancybox="gallery" data-sizes="auto" data-src="/.io//Users\11327\AppData\Roaming\Typora\typora-user-images\image-20240820174402385.png" alt="image-20240820174402385" class="lazyload"></p>
+<h4><span id="34-vscode的安装">3.4 Vscode的安装</span></h4><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode官网下载链接</a>，直接点击该链接下载即可，安装过程直接一路Next即可，这里就不过多的赘述了</p>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>John Doe<br>
+        <strong>Link：</strong><a href="https://luxiwe.github.io/2024/08/20/%E5%88%A9%E7%94%A8HEXO%E4%B8%8EGithub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="https:&#x2F;&#x2F;luxiwe.github.io&#x2F;2024&#x2F;08&#x2F;20&#x2F;利用HEXO与Github搭建博客&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;luxiwe.github.io&#x2F;2024&#x2F;08&#x2F;20&#x2F;利用HEXO与Github搭建博客&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="-your github username-/-your giscus repo-"
+      data-repo-id="-your giscus repo ID-"
+      data-category="Announcements"
+      data-category-id="-giscus category id-"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
